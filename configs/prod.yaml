@@ -1,0 +1,44 @@
+env: prod
+project_id: syem-genai-data-platform
+write_mode: bigquery
+
+paths:
+  orders_input: gs://syem-genai-raw-layer/olist/orders/orders_source_2016_2018.csv
+  order_items_input: gs://syem-genai-raw-layer/olist/order_items/order_items_source.csv
+  customers_input: gs://syem-genai-raw-layer/olist/customers/customers_source.csv
+  products_input: gs://syem-genai-raw-layer/olist/products/products_source.csv
+  sellers_input: gs://syem-genai-raw-layer/olist/sellers/sellers_source.csv
+  payments_input: gs://syem-genai-raw-layer/olist/payments/payments_source.csv
+  reviews_input: gs://syem-genai-raw-layer/olist/reviews/reviews_source.csv
+  category_translation_input: gs://syem-genai-raw-layer/olist/category_translation/category_translation_source.csv
+  geolocation_input: gs://syem-genai-raw-layer/olist/geolocation/geolocation_source.csv
+
+bq:
+  processed_dataset: processed_layer
+  curated_dataset: curated_layer
+
+  orders_table: orders
+  order_items_table: order_items
+  customers_table: customers
+  products_table: products
+  sellers_table: sellers
+  payments_table: payments
+  reviews_table: reviews
+  category_translation_table: category_translation
+  geolocation_table: geolocation
+
+  curated_orders_table: orders
+  curated_order_items_table: order_items
+  curated_customers_table: customers
+  curated_products_table: products
+  curated_sellers_table: sellers
+  curated_payments_table: payments
+  curated_reviews_table: reviews
+  curated_category_translation_table: category_translation
+  curated_geolocation_table: geolocation
+
+gcs:
+  temp_bucket: syem-genai-temp
+
+metadata:
+  record_source: olist
