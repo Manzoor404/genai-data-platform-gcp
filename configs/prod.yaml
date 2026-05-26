@@ -37,6 +37,10 @@ bq:
   curated_category_translation_table: category_translation
   curated_geolocation_table: geolocation
 
+  analytics_dataset: analytics_layer
+  seller_performance_table: seller_performance
+  customer_rfm_table: customer_rfm
+  daily_sales_table: daily_sales_mart
 gcs:
   temp_bucket: syem-genai-temp
 
